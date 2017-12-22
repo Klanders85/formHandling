@@ -18,10 +18,10 @@
   </mat-form-field>
 
   <div>
-    <button mat-raised-button color="primary">Login</button>
+    <button mat-raised-button color="primary" *ngIf="!registerNewUser">Login</button>
+    <button mat-raised-button color="primary" *ngIf="registerNewUser">Register</button>
   </div>
 
   <p (click)="registerUserToggle()">New User?</p>
   </form>
 </mat-card>
-  
