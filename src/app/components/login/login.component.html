@@ -1,0 +1,27 @@
+<mat-card>
+  <form (submit)="onSubmit()" method="POST" id="nameAndMarialStatusForm">
+    <h1>Welcome! Login or Register to continue</h1>
+  
+  <mat-form-field>
+    <label for="email">Email</label>
+    <input matInput type="text" name="email" id="email" [(ngModel)]="email"/>
+  </mat-form-field>
+
+  <mat-form-field>
+    <label for="password">Password</label>
+    <input matInput type="password" name="password" id="password" [(ngModel)]="password"/>
+  </mat-form-field>
+
+  <mat-form-field *ngIf="registerNewUser">
+    <label for="confirmPassword">Confirm Password</label>
+    <input matInput type="password" name="confirmPassword" id="confirmPassword" [(ngModel)]="confirmPassword"/>
+  </mat-form-field>
+
+  <div>
+    <button mat-raised-button color="primary">Login</button>
+  </div>
+
+  <p (click)="registerUserToggle()">New User?</p>
+  </form>
+</mat-card>
+  
