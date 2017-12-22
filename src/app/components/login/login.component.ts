@@ -17,7 +17,6 @@ import { MatSelectModule } from '@angular/material/select';
   providers: [UserService]
 })
 export class LoginComponent implements OnInit {
-
   constructor(private _userService: UserService, private http: Http ) {};
 
   private users:UserInfo[];
@@ -37,5 +36,4 @@ export class LoginComponent implements OnInit {
 	}
 
   ngOnInit() {}
-
 }

@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { UserService } from './services/user.service';
 import { Observable } from "rxjs/Rx"
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatCardModule, MatInputModule, MatSelectModule, MatButtonModule, MatCheckboxModule, MatCheckbox, MatFormFieldModule } from '@angular/material';
+import { MatCardModule, MatToolbarModule, MatInputModule, MatSelectModule, MatButtonModule, MatCheckboxModule, MatCheckbox, MatFormFieldModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -22,6 +22,7 @@ import { LoginComponent } from './components/login/login.component';
     HttpModule,
     BrowserAnimationsModule,
     MatCardModule,
+    MatToolbarModule,
     MatInputModule, 
     MatSelectModule,
     MatButtonModule,
