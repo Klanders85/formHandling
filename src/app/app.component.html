@@ -1,0 +1,30 @@
+<mat-card>
+  <form (submit)="onSubmit()" method="POST" id="nameAndMarialStatusForm">
+	<mat-form-field>
+		<label for="title">Title</label>
+		<input matInput type="text" name="title" id="title" [(ngModel)]="title"/>
+	</mat-form-field>
+  
+	<mat-form-field>
+		<label for="first-name">First Name</label>
+		<input matInput type="text" name="first-name" id="first-name" [(ngModel)]="name"/>
+	</mat-form-field>
+
+        
+      
+	<mat-form-field>
+		<label for="marital-status">Marital Status</label>
+		<mat-select name="martial-status" id="marital-status" [(ngModel)]="maritalStatus">
+			<mat-option value="default">Marital Status</mat-option>
+			<mat-option value="single">Single</mat-option>
+			<mat-option value="married">Married</mat-option>
+			<mat-option value="windowed">Widowed</mat-option>
+		</mat-select>
+	</mat-form-field>
+         
+  
+      
+        <h2 (click)="getListOfUsers()">Get List of Users</h2>
+        <p *ngFor="let user of users">{{user.title}}. {{user.name}} is {{user.maritalStatus}}</p>
+  </form>
+</mat-card>
